@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background: linear-gradient(-45deg, rgba(196, 176, 155, 1), black, white);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.main {
+  background: rgba(196, 176, 155, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+
+.background-image {
+  background: url("../images/v2_2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-top-left-radius: 98px;
+  border-top-right-radius: 98px;
+  border-bottom-left-radius: 98px;
+  border-bottom-right-radius: 98px;
+  height: 840px;
+}
+
+.container {
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 30px;
+}
+
+.container-item {
+  margin: 25px;
+  flex-grow: 2;
+  border-radius: 10px;
+}
+
+.container-text {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Press Start 2P";
+  font-weight: "Regular";
+  font-size: 24px;
+  text-align: center;
+}
+
+button.container-text {
+  font-size: 18px;
+  padding: 10px;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+}
+
+.textarea {
+  background: rgba(256,256,256, 0.7);
+  font-size: 16px;
+  padding: 10px;
+}
+
+.response {
+  font-size: 14px;
+  border: 1px solid;
+  padding: 20px;
+  background: radial-gradient(rgba(196, 176, 155, 0.7), rgba(196, 176, 155, 1));
+  display: none;
+  line-height: 2;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.loader {
+  display: none;
+  flex-direction: column
+}
+
+.loader .container-text {
+  font-size: 12px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

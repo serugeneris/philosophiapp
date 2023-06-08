@@ -1,0 +1,19 @@
+<%- include('./includes/head.ejs') %>
+
+<link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="main background-image">
+        <div class="container">
+            <div class="container-item container-text">Ask a question to the philosopher</div>
+            <textarea class="container-item textarea"></textarea>
+            <button id="send-question" class="container-item container-text">Send the question!</button>
+            <div class="loader">
+                <div class="container-text">This might take a while, be patient!</div>
+                <div class="lds-dual-ring"></div>
+            </div>
+            <div class="container-item container-text response"></div>
+        </div>
+    </main>
+<%-include('./includes/end.ejs') %>
