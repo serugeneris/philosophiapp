@@ -19,6 +19,4 @@ app.use((req, res, next) => {
     next();
 });
 app.use(routes_1.router);
-console.log('working app.js');
-console.log(process.env.OPENAI_KEY);
 app.listen(3000);
