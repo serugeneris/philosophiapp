@@ -4,16 +4,40 @@
 </head>
 
 <body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
     <main class="main background-image">
         <div class="container">
-            <div class="container-item container-text">Ask a question to the philosopher</div>
-            <textarea class="container-item textarea"></textarea>
-            <button id="send-question" class="container-item container-text">Send the question!</button>
-            <div class="loader">
-                <div class="container-text">This might take a while, be patient!</div>
-                <div class="lds-dual-ring"></div>
+            <div class="header-section">
+                <h1 class="main-title">Philosophia</h1>
+                <p class="subtitle">Converse with the greatest minds in history</p>
             </div>
-            <div class="container-item container-text response"></div>
+            
+            <div class="conversation-container" id="conversation-container"></div>
+            
+            <div class="question-section">
+                <label for="question-input" class="input-label">Your Question</label>
+                <textarea id="question-input" class="textarea" placeholder="What profound question occupies your mind today?"></textarea>
+            </div>
+            <div class="button-group">
+                <button id="send-question" class="send-btn">
+                    <span class="btn-text">Ask the Philosopher</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button id="reset-conversation" class="reset-btn">
+                    <svg class="reset-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12C3 7.02944 7.02944 3 12 3C14.3699 3 16.5068 3.94285 18.0596 5.46884M21 12C21 16.9706 16.9706 21 12 21C9.63005 21 7.49317 20.0571 5.94036 18.5312M3 21V15M3 15H9M21 3V9M21 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="btn-text">New Conversation</span>
+                </button>
+            </div>
+            <div class="loader">
+                <div class="spinner"></div>
+                <p class="loader-text">Contemplating your question...</p>
+            </div>
         </div>
     </main>
 <%-include('./includes/end.ejs') %>
